@@ -1,0 +1,687 @@
+/* Estilos Generales y Formales con colores #432918 y #D9C9A3 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+
+body {
+    background-color: #fdfbf7;
+    color: #432918;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Encabezado */
+header {
+    background-color: #432918;
+    color: #D9C9A3;
+    padding: 1.5rem 2rem;
+    border-bottom: 4px solid #D9C9A3;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.school-logo {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: #ffffff;
+    padding: 3px;
+    border: 2px solid #D9C9A3;
+}
+
+.logo-container h1 {
+    font-size: 1.4rem;
+    margin-bottom: 0.1rem;
+}
+
+.logo-container h2 {
+    font-size: 1.7rem;
+    color: #ffffff;
+    margin-bottom: 0.2rem;
+}
+
+.logo-container p {
+    font-size: 0.85rem;
+    color: #D9C9A3;
+    opacity: 0.9;
+}
+
+/* Navegación Principal */
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-top: 1.2rem;
+}
+
+.nav-btn {
+    background-color: transparent;
+    border: 2px solid #D9C9A3;
+    color: #D9C9A3;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover, .nav-btn.active {
+    background-color: #D9C9A3;
+    color: #432918;
+}
+
+/* Contenido Principal */
+main {
+    flex: 1;
+    padding: 2.5rem 1rem;
+    max-width: 950px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.content-section {
+    display: none;
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid #e6dec9;
+    box-shadow: 0 4px 8px rgba(67, 41, 24, 0.05);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.content-section.active {
+    display: block;
+}
+
+h2 {
+    color: #432918;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #D9C9A3;
+    padding-bottom: 0.5rem;
+}
+
+p, li {
+    line-height: 1.7;
+    color: #5a3d2b;
+    margin-bottom: 1rem;
+}
+
+.info-block {
+    margin-bottom: 1.5rem;
+}
+
+.info-block h3 {
+    color: #432918;
+    margin-bottom: 0.5rem;
+    font-size: 1.15rem;
+}
+
+.values-list {
+    padding-left: 1.5rem;
+}
+
+.values-list li {
+    margin-bottom: 0.3rem;
+}
+
+/* Rejilla de Botones Centrales para Difusión */
+.sub-nav-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 450px;
+    margin: 2rem auto 0 auto;
+}
+
+.sub-btn {
+    background-color: #432918;
+    color: #D9C9A3;
+    border: 2px solid #432918;
+    padding: 0.9rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.sub-btn:hover {
+    background-color: #D9C9A3;
+    color: #432918;
+    border-color: #432918;
+}
+
+/* Botón para regresar al menú de difusión */
+.back-to-difusion-btn {
+    background-color: transparent;
+    border: 1px solid #432918;
+    color: #432918;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    transition: background 0.2s;
+}
+
+.back-to-difusion-btn:hover {
+    background-color: #f7f3e8;
+}
+
+/* Estilos para las Imágenes */
+.image-container {
+    text-align: center;
+    margin-top: 1.5rem;
+    background-color: #f7f3e8;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid #D9C9A3;
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Cajas e Interiores */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.card {
+    background: #fdfbf7;
+    border: 1px solid #D9C9A3;
+    padding: 1.5rem;
+    border-radius: 6px;
+}
+
+.resource-box {
+    background: #f7f3e8;
+    padding: 1.2rem;
+    border-radius: 6px;
+    margin-top: 1.2rem;
+    border: 1px dashed #432918;
+}
+
+/* Pie de página */
+footer {
+    background-color: #432918;
+    color: #D9C9A3;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.85rem;
+    border-top: 4px solid #D9C9A3;
+}
+
+footer p {
+    color: #D9C9A3;
+    margin-bottom: 0.3rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================================
+   BOTÓN "VER MÁS" Y VALORES
+   ================================ */
+
+.toggle-btn {
+    display: block;
+    width: 100%;
+    background-color: #432918;
+    color: #D9C9A3;
+    border: 2px solid #432918;
+    padding: 0.8rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.toggle-btn:hover {
+    background-color: #D9C9A3;
+    color: #432918;
+}
+
+.valores-ocultos {
+    display: none;
+    margin-top: 1.2rem;
+    padding-top: 1rem;
+    border-top: 1px dashed #D9C9A3;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.valores-ocultos.visible {
+    display: block;
+}
+
+/* ================================
+   FORMULARIO DE CONTACTO
+   ================================ */
+
+.contact-form {
+    margin-top: 1.5rem;
+    background: #f7f3e8;
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid #D9C9A3;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form-row .form-group {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #432918;
+    margin-bottom: 0.4rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #D9C9A3;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #432918;
+    font-family: 'Georgia', serif;
+    font-size: 0.95rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #432918;
+    box-shadow: 0 0 0 2px rgba(217, 201, 163, 0.5);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.checkbox-group {
+    flex-direction: row;
+    margin-top: 0.5rem;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-weight: normal;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #5a3d2b;
+    line-height: 1.4;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin-top: 0.2rem;
+    cursor: pointer;
+    accent-color: #432918;
+}
+
+.submit-btn {
+    background-color: #432918;
+    color: #D9C9A3;
+    border: 2px solid #432918;
+    padding: 0.9rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+    margin-top: 0.8rem;
+}
+
+.submit-btn:hover {
+    background-color: #D9C9A3;
+    color: #432918;
+}
+
+.success-message {
+    margin-top: 1rem;
+    padding: 0.9rem 1rem;
+    background: #e8f4e8;
+    border: 1px solid #7ab77a;
+    border-radius: 6px;
+    color: #2e5d2e;
+    font-weight: bold;
+    text-align: center;
+    display: none;
+}
+
+.success-message.visible {
+    display: block;
+}
+
+/* ================================
+   CARRUSEL DE GALERÍA
+   ================================ */
+
+.carousel {
+    position: relative;
+    margin-top: 1.5rem;
+    background: #f7f3e8;
+    border: 1px solid #D9C9A3;
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+.carousel-track {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background: #432918;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    position: absolute;
+    inset: 0;
+    display: none;
+}
+
+.carousel-slide.active {
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.4s ease;
+}
+
+.carousel-img {
+    width: 100%;
+    flex: 1;
+    object-fit: cover;
+    display: block;
+    min-height: 0;
+}
+
+.carousel-caption {
+    background: rgba(67, 41, 24, 0.92);
+    color: #D9C9A3;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    text-align: center;
+    margin: 0;
+    border-top: 1px solid #D9C9A3;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(67, 41, 24, 0.75);
+    color: #D9C9A3;
+    border: 2px solid #D9C9A3;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s;
+    z-index: 2;
+    padding: 0;
+}
+
+.carousel-btn:hover {
+    background: #D9C9A3;
+    color: #432918;
+}
+
+.carousel-btn.prev { left: 0.75rem; }
+.carousel-btn.next { right: 0.75rem; }
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.9rem;
+    flex-wrap: wrap;
+}
+
+.dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #D9C9A3;
+    opacity: 0.55;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    transition: opacity 0.2s, background 0.2s, transform 0.2s;
+}
+
+.dot:hover {
+    opacity: 0.85;
+}
+
+.dot.active {
+    opacity: 1;
+    background: #432918;
+    transform: scale(1.2);
+}
+
+/* ================================
+   AJUSTES PARA MÓVIL
+   ================================ */
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+
+    .school-logo {
+        width: 72px;
+        height: 72px;
+    }
+
+    .logo-container h1 {
+        font-size: 1.15rem;
+    }
+
+    .logo-container h2 {
+        font-size: 1.35rem;
+    }
+
+    .logo-container p {
+        font-size: 0.8rem;
+    }
+
+    .main-nav {
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .nav-btn {
+        padding: 0.45rem 0.7rem;
+        font-size: 0.85rem;
+        max-width: 100%;
+        white-space: normal;
+    }
+
+    main {
+        padding: 1.25rem 0.75rem;
+    }
+
+    .content-section {
+        padding: 1.25rem;
+        border-radius: 6px;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    p, li {
+        font-size: 0.95rem;
+    }
+
+    .sub-nav-grid {
+        max-width: 100%;
+        gap: 0.75rem;
+        margin-top: 1.25rem;
+    }
+
+    .sub-btn {
+        padding: 0.8rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .back-to-difusion-btn {
+        font-size: 0.8rem;
+        padding: 0.45rem 0.7rem;
+    }
+
+    .image-container {
+        padding: 0.6rem;
+        margin-top: 1rem;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .resource-box {
+        padding: 1rem;
+    }
+
+    footer {
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+
+    /* Formulario en móvil */
+    .contact-form {
+        padding: 1rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .form-row .form-group {
+        margin-bottom: 1rem;
+    }
+
+    /* Carrusel en móvil */
+    .carousel {
+        padding: 0.6rem;
+    }
+
+    .carousel-track {
+        aspect-ratio: 4 / 3;
+    }
+
+    .carousel-caption {
+        font-size: 0.85rem;
+        padding: 0.55rem 0.7rem;
+    }
+
+    .carousel-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 1.2rem;
+        border-width: 1.5px;
+    }
+
+    .carousel-btn.prev { left: 0.5rem; }
+    .carousel-btn.next { right: 0.5rem; }
+}
+
+@media (max-width: 480px) {
+    .logo-container h1 {
+        font-size: 1rem;
+    }
+
+    .logo-container h2 {
+        font-size: 1.2rem;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-btn {
+        width: 100%;
+        padding: 0.6rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .content-section {
+        padding: 1rem;
+    }
+
+    .sub-btn {
+        font-size: 0.9rem;
+        padding: 0.75rem 0.9rem;
+    }
+
+    .carousel-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+}
